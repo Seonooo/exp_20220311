@@ -7,10 +7,13 @@ var logger = require('morgan');
 // npm i mongoose -- save
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://id218:pw218@1.234.5.158:37017/db218');
-var db =  mongoose.connection;
-db.once('open', function(){
+var db = mongoose.connection;
+db.once('open', function () {
   console.log('mongodb 연결됨.');
 })
+
+// routes 등록
+require('./routes/chat'); // rest api가 아님, url 필요없음
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -35,12 +38,12 @@ app.use('/book', bookRouter);
 app.use('/member', memberRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
