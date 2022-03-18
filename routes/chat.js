@@ -5,10 +5,8 @@ const app = express();
 const http = require('http');
 const httpServer = http.createServer(app);
 
-const { Server } = require('socket.io');
-// const Server = require('socket.io').Server;
-
-const io = new Server(httpServer, { path: '/' });
+const io = require('socket.io')(httpServer, 
+    { path:'/socket', cors : {origin:'*:*'} });
 
 httpServer.listen(3001, () => {
     console.log('3001 socket.io server start');
@@ -16,7 +14,7 @@ httpServer.listen(3001, () => {
 
 // 클라이언트가 접속했을때 수행됨.
 io.on('connection', (socket) => {
-    console.log(socket);
+    console.log(socket.id);
     // 클라이언트에서 메세지가 도착했을때
     socket.on('publish', function (data) {
         console.log(data);
