@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -104,
-    "scrollLeft": -292,
+    "scrollTop": -242.3333278364608,
+    "scrollLeft": -277.8333338962659,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -19,7 +19,7 @@
     },
     "database": "Oracle",
     "databaseName": "",
-    "canvasType": "@vuerd/builtin-sql-ddl",
+    "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -120,7 +120,7 @@
           "active": false,
           "left": 211,
           "top": 115,
-          "zIndex": 178,
+          "zIndex": 1,
           "widthName": 65.22265625,
           "widthComment": 67
         },
@@ -205,7 +205,7 @@
           "active": false,
           "left": 768,
           "top": 127,
-          "zIndex": 189,
+          "zIndex": 3,
           "widthName": 79.86669921875,
           "widthComment": 67
         },
@@ -359,7 +359,7 @@
           "active": false,
           "left": 778.6111,
           "top": 467.3889,
-          "zIndex": 197,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 67
         },
@@ -444,7 +444,7 @@
           "active": false,
           "left": 242.25,
           "top": 473.5,
-          "zIndex": 204,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 67
         },
@@ -529,7 +529,7 @@
           "active": false,
           "left": 793.5554,
           "top": 756.6667,
-          "zIndex": 184,
+          "zIndex": 2,
           "widthName": 86.2841796875,
           "widthComment": 80
         },
